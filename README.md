@@ -1,8 +1,8 @@
-# 😂 Generative AI Meme Maker — gen-ai
+#  Generative AI Meme Maker
 
 Create shareable memes automatically: type a prompt or upload an image, let the model generate (or you upload) an image, and have an LLM suggest witty captions. Compose the final meme with top/bottom text and download it as PNG.
 
----
+
 
 ## ✨ Highlights
 
@@ -12,7 +12,7 @@ Create shareable memes automatically: type a prompt or upload an image, let the 
 - 🧩 **Streamlit UI** — simple, interactive, shareable.  
 - 🛡️ Safety notes & content guidance included.
 
----
+
 
 ## 🚀 Quickstart
 
@@ -42,7 +42,7 @@ streamlit run streamlit_app.py
 
 Open `http://localhost:8501`.
 
----
+
 
 ## 🔧 Configuration
 
@@ -52,7 +52,7 @@ Open `http://localhost:8501`.
   - `DEVICE` — `"cuda"` or `"cpu"`.
   - `FONT_PATH` — path to a TTF font to use for top/bottom text (optional).
 
----
+
 
 ## 🧠 How it works (short)
 
@@ -61,7 +61,7 @@ Open `http://localhost:8501`.
 3. **Meme composition** — `compose_meme` overlays the chosen caption(s) on the generated/uploaded image using PIL, with outline, wrapping, and simple layout heuristics.  
 4. **Download** — You can download the final meme as a PNG.
 
----
+
 
 ## ✅ Tips & Tricks
 
@@ -70,7 +70,7 @@ Open `http://localhost:8501`.
 - If you find generation slow, use smaller image sizes (512×512) or use a GPU.  
 - Want different caption styles? change `tone` in the sidebar to get sarcastic/vulgar/wholesome variants (be mindful of policy and safety).
 
----
+
 
 ## ⚠️ Safety & Policy
 
@@ -78,7 +78,7 @@ Open `http://localhost:8501`.
 - **Be careful with public figures** — generating synthetic images of real people, especially public figures, can be unethical and/or prohibited depending on your jurisdiction or hosting platform.  
 - **Content moderation**: you should add a moderation step in production to detect disallowed content.
 
----
+
 
 ## 🛠️ Extensibility (ideas)
 
@@ -87,16 +87,3 @@ Open `http://localhost:8501`.
 - Replace LLM with on-device model (Llama, Mistral) for privacy.  
 - Fine-tune an SD model for a consistent meme aesthetic (e.g., pixel-art or comic style).
 
----
-
-## 🔁 Troubleshooting
-
-- **Diffusers errors** — ensure `transformers`, `diffusers`, and `torch` are compatible. On CUDA machines install the matching torch wheel from PyTorch site.  
-- **OpenAI errors** — set `OPENAI_API_KEY` in `.env`. If not provided, the app falls back to canned captions.  
-- **Font issues** — if text looks tiny or missing, set a `FONT_PATH` to a TTF file on your machine.
-
----
-
-## 📜 License
-
-MIT — use freely for prototypes and demos. Respect people & copyright.
